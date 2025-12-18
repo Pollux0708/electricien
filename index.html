@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Électricien Pro - Accueil</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/volteeo-run-logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/volteeo-run-logo.png">
+  <script defer src="script.js"></script>
+  <meta name="description" content="Électricien Pro — installation, dépannage et domotique pour particuliers et professionnels. Devis rapide.">
+</head>
+<body>
+
+  <header>
+    <div class="menu-toggle" id="menu-toggle" role="button" aria-controls="menu" aria-expanded="false" aria-label="Ouvrir le menu">☰</div>
+    <a href="index.html" class="logo" aria-label="Accueil (ouvre dans un nouvel onglet)" target="_blank" rel="noopener noreferrer">
+      <img src="images/volteeo-run-logo.png" alt="Voltéo" class="logo-img">
+      <span class="icon-external" data-tooltip="Ouvre dans un nouvel onglet" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/>
+          <path d="M5 5h5V3H3v7h2V5z"/>
+        </svg>
+      </span>
+    </a>
+    <nav id="menu" role="navigation" aria-hidden="true" tabindex="-1">
+      <button id="menu-close" class="menu-close" aria-label="Fermer le menu">✕</button>
+      <a href="index.html" class="active">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div id="menu-overlay" class="menu-overlay" hidden aria-hidden="true"></div>
+
+<!-- Section hero avec vidéo en arrière-plan -->
+<main class="hero-video">
+  <video autoplay muted loop playsinline class="hero-video-bg">
+    <source src="images/living room travelling.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la vidéo.
+  </video>
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Votre électricien de confiance</h1>
+    <p>Installation, dépannage et domotique pour particuliers et professionnels.</p>
+    <a href="contact.html" class="btn">Demander un devis</a>
+  </div>
+</main>
+
+<!-- Section À propos de nous -->
+<section class="about-us">
+  <div class="container about-grid">
+    <div class="about-text">
+      <h2>À propos de nous</h2>
+      <p>Électricien Pro intervient depuis plus de 10 ans auprès des particuliers et professionnels. Nous assurons des prestations de qualité, en toute sécurité, pour tous vos travaux électriques et solutions domotiques.</p>
+      <p>Notre équipe de techniciens qualifiés s’engage à respecter les délais et à vous fournir un service réactif et efficace.</p>
+    </div>
+    <div class="about-image">
+      <img src="images/electricien au travail.png" alt="Électricien au travail">
+    </div>
+  </div>
+</section>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span class="js-year"></span> Aptoi — <a href="mentions.html">Mentions légales</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
+

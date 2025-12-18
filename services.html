@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos Services - Électricien Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/volteeo-run-logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/volteeo-run-logo.png">
+  <script defer src="script.js"></script>
+  <meta name="description" content="Services d'installation, dépannage et domotique par Électricien Pro.">
+</head>
+<body>
+
+<header>
+  <div class="menu-toggle" id="menu-toggle" role="button" aria-controls="menu" aria-expanded="false" aria-label="Ouvrir le menu">☰</div>
+  <a href="index.html" class="logo" aria-label="Accueil (ouvre dans un nouvel onglet)" target="_blank" rel="noopener noreferrer">
+    <img src="images/volteeo-run-logo.png" alt="Voltéo" class="logo-img">
+    <span class="icon-external" data-tooltip="Ouvre dans un nouvel onglet" aria-hidden="true">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/>
+        <path d="M5 5h5V3H3v7h2V5z"/>
+      </svg>
+    </span>
+  </a>
+  <nav id="menu" role="navigation" aria-hidden="true" tabindex="-1">
+    <button id="menu-close" class="menu-close" aria-label="Fermer le menu">✕</button>
+    <a href="index.html">Accueil</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="realisations.html">Réalisations</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div id="menu-overlay" class="menu-overlay" hidden aria-hidden="true"></div>
+
+<main class="content">
+  <h1>Nos Services</h1>
+  <div class="services-grid">
+
+    <div class="service">
+      <div class="service-bubble" style="background-image: url('images/technicien.jpg');"></div>
+      <h2>Installation électrique</h2>
+      <p>Mise en place complète ou partielle de réseaux électriques, neufs ou en rénovation.</p>
+    </div>
+
+    <div class="service">
+      <div class="service-bubble" style="background-image: url('images/dépanneur.jpg');"></div>
+      <h2>Dépannage rapide</h2>
+      <p>Intervention urgente 7j/7 en cas de panne ou court-circuit.</p>
+    </div>
+
+    <div class="service">
+      <div class="service-bubble" style="background-image: url('images/domotique.jpg');"></div>
+      <h2>Domotique & sécurité</h2>
+      <p>Installation de solutions connectées pour plus de confort et d’efficacité énergétique.</p>
+    </div>
+
+  </div>
+</main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span class="js-year"></span> Aptoi — <a href="mentions.html">Mentions légales</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
