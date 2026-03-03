@@ -1,56 +1,50 @@
-console.log('script.js chargé');
+document.addEventListener('DOMContentLoaded', () => {
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
 
-const toggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
-const overlay = document.getElementById('menu-overlay');
-const closeBtn = document.getElementById('menu-close');
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+      navToggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+    });
 
-function openMenu(){
-  menu.classList.add('show');
-  overlay.classList.add('show');
-  toggle.setAttribute('aria-expanded','true');
-  menu.setAttribute('aria-hidden','false');
-  if (overlay.hasAttribute('hidden')) overlay.removeAttribute('hidden');
-  overlay.setAttribute('aria-hidden','false');
-  toggle.setAttribute('aria-label','Fermer le menu');
-  // permettre focus programmatique sur bouton fermer
-  if(closeBtn) closeBtn.focus();
-}
+    navMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Ouvrir le menu');
+      });
+    });
 
-function closeMenu(){
-  menu.classList.remove('show');
-  overlay.classList.remove('show');
-  toggle.setAttribute('aria-expanded','false');
-  menu.setAttribute('aria-hidden','true');
-  overlay.setAttribute('aria-hidden','true');
-  overlay.setAttribute('hidden','');
-  toggle.setAttribute('aria-label','Ouvrir le menu');
-  toggle.focus();
-}
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        navMenu.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Ouvrir le menu');
+      }
+    });
+  }
 
-toggle.addEventListener('click', ()=>{
-  const expanded = toggle.getAttribute('aria-expanded') === 'true';
-  if(expanded) closeMenu(); else openMenu();
-});
+  const yearElements = document.querySelectorAll('.js-year');
+  yearElements.forEach((element) => {
+    element.textContent = new Date().getFullYear();
+  });
 
-// fermer au clic sur overlay
-overlay.addEventListener('click', closeMenu);
+  if (window.lottie) {
+    document.querySelectorAll('.lottie-icon[data-lottie]').forEach((container) => {
+      const animationPath = container.getAttribute('data-lottie');
+      if (!animationPath) {
+        return;
+      }
 
-// fermer si on clique sur un lien du menu (pratique mobile)
-menu.addEventListener('click', (e)=>{
-  if(e.target.tagName === 'A') closeMenu();
-});
-
-// bouton X fermer
-if(closeBtn) closeBtn.addEventListener('click', closeMenu);
-
-// fermer sur Escape
-document.addEventListener('keydown', (e)=>{
-  if(e.key === 'Escape' && menu.classList.contains('show')) closeMenu();
-});
-
-// Met à jour dynamiquement l'année dans le footer
-document.addEventListener('DOMContentLoaded', ()=>{
-  const yearEls = document.querySelectorAll('.js-year');
-  yearEls.forEach(el => el.textContent = new Date().getFullYear());
+      window.lottie.loadAnimation({
+        container,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: animationPath,
+      });
+    });
+  }
 });

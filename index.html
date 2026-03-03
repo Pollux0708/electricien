@@ -7,64 +7,183 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/volteeo-run-logo.png" type="image/png">
   <link rel="apple-touch-icon" href="images/volteeo-run-logo.png">
+  <script src="assets/lottie.min.js" defer></script>
   <script defer src="script.js"></script>
   <meta name="description" content="Électricien Pro — installation, dépannage et domotique pour particuliers et professionnels. Devis rapide.">
 </head>
-<body>
+<body class="home-page">
 
-  <header>
-    <div class="menu-toggle" id="menu-toggle" role="button" aria-controls="menu" aria-expanded="false" aria-label="Ouvrir le menu">☰</div>
-    <a href="index.html" class="logo" aria-label="Accueil (ouvre dans un nouvel onglet)" target="_blank" rel="noopener noreferrer">
-      <img src="images/volteeo-run-logo.png" alt="Voltéo" class="logo-img">
-      <span class="icon-external" data-tooltip="Ouvre dans un nouvel onglet" aria-hidden="true">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-          <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/>
-          <path d="M5 5h5V3H3v7h2V5z"/>
-        </svg>
-      </span>
-    </a>
-    <nav id="menu" role="navigation" aria-hidden="true" tabindex="-1">
-      <button id="menu-close" class="menu-close" aria-label="Fermer le menu">✕</button>
-      <a href="index.html" class="active">Accueil</a>
-      <a href="services.html">Services</a>
-      <a href="realisations.html">Réalisations</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-main">
+      <a class="brand" href="index.html" aria-label="Accueil">
+        <img src="assets/images/logo.png" alt="Logo Électricien Pro">
+      </a>
+      <button id="navToggle" class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu">☰</button>
+      <div class="header-info">
+        <a class="info-cta" href="tel:0692444546" aria-label="Appeler">
+          <span class="lottie-icon" data-lottie="assets/Contact number icon.json" aria-hidden="true"></span>
+          <span><strong>Téléphone</strong><small>0692 44 45 46</small></span>
+        </a>
+        <a class="info-cta" href="mailto:contact@electricien-demo.fr" aria-label="Email">
+          <span class="lottie-icon" data-lottie="assets/email icon.json" aria-hidden="true"></span>
+          <span><strong>Email</strong><small>contact@electricien-demo.fr</small></span>
+        </a>
+        <a class="info-cta" href="https://wa.me/262692444546" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <span class="lottie-icon" data-lottie="assets/What's app icons.json" aria-hidden="true"></span>
+          <span><strong>WhatsApp</strong><small>Message direct</small></span>
+        </a>
+      </div>
+    </div>
+    <div class="nav-strip">
+      <div class="container">
+        <nav id="navMenu" class="nav-menu" aria-label="Navigation principale">
+          <a class="active" href="index.html">Accueil</a>
+          <a href="services.html">Services</a>
+          <a href="realisations.html">Réalisations</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <div id="menu-overlay" class="menu-overlay" hidden aria-hidden="true"></div>
-
-<!-- Section hero avec vidéo en arrière-plan -->
-<main class="hero-video">
-  <video autoplay muted loop playsinline class="hero-video-bg">
-    <source src="images/living room travelling.mp4" type="video/mp4">
-    Votre navigateur ne supporte pas la vidéo.
-  </video>
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <h1>Votre électricien de confiance</h1>
-    <p>Installation, dépannage et domotique pour particuliers et professionnels.</p>
-    <a href="contact.html" class="btn">Demander un devis</a>
-  </div>
-</main>
-
-<!-- Section À propos de nous -->
+<!-- Section Présentation Fabien -->
 <section class="about-us">
   <div class="container about-grid">
     <div class="about-text">
-      <h2>À propos de nous</h2>
-      <p>Électricien Pro intervient depuis plus de 10 ans auprès des particuliers et professionnels. Nous assurons des prestations de qualité, en toute sécurité, pour tous vos travaux électriques et solutions domotiques.</p>
-      <p>Notre équipe de techniciens qualifiés s’engage à respecter les délais et à vous fournir un service réactif et efficace.</p>
+      <h2>Fabien, votre électricien référent</h2>
+      <p>Je m’appelle Fabien et j’accompagne mes clients sur des projets d’installation, de dépannage et de rénovation électrique avec une approche claire et structurée.</p>
+      <p>Chaque intervention est pensée comme un service premium : diagnostic précis, exécution soignée et suivi sérieux jusqu’à la livraison finale.</p>
+      <a class="info-cta about-call" href="tel:0692444546" aria-label="Appeler Fabien">
+        <span class="lottie-icon" data-lottie="assets/Contact number icon.json" aria-hidden="true"></span>
+        <span><strong>Appel direct</strong><small>0692 44 45 46</small></span>
+      </a>
     </div>
     <div class="about-image">
-      <img src="images/electricien au travail.png" alt="Électricien au travail">
+      <img src="images/fabien.jpg" alt="Portrait de Fabien" loading="eager">
+    </div>
+  </div>
+  <div class="container about-driving-row" role="group" aria-label="Zone d'intervention">
+    <figure class="about-driving-shot">
+      <img src="images/camionnette.png" alt="Fabien au volant de sa camionnette d'intervention" loading="lazy">
+    </figure>
+    <div class="about-driving-text">
+      <h3>Interventions de proximité</h3>
+      <p>Priorité d’intervention sur l’Ouest de l’île : Saint-Paul, Le Port et La Possession, pour des délais plus courts et un suivi plus réactif.</p>
+      <a class="info-cta about-driving-call" href="tel:0692444546" aria-label="Appeler Fabien depuis la section interventions de proximité">
+        <span class="lottie-icon" data-lottie="assets/Contact number icon.json" aria-hidden="true"></span>
+        <span><strong>Appel direct</strong><small>0692 44 45 46</small></span>
+      </a>
     </div>
   </div>
 </section>
 
+<!-- Section hero statique -->
+<main class="hero-static">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Un électricien de terrain, réactif et professionnel</h1>
+    <p>Panne urgente, rénovation ou installation neuve : j’interviens avec méthode, je travaille proprement et je vous propose un devis clair, sans surprise.</p>
+    <div class="hero-actions">
+      <a href="contact.html" class="btn">Demander un devis</a>
+      <a href="services.html" class="btn btn-secondary">Voir les services</a>
+      <a href="tel:0692444546" class="btn btn-secondary btn-call" aria-label="Appeler">
+        <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6 3h4l2 5-2.5 1.5a14 14 0 006 6L17 13l5 2v4a2 2 0 01-2.2 2A18 18 0 013 6.2 2 2 0 015 4h1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Appeler</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<section class="home-highlights">
+  <div class="container highlights-grid">
+    <article class="highlight-card">
+      <span class="card-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" focusable="false"><path d="M12 12a4 4 0 100-8 4 4 0 000 8z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21a8 8 0 0116 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </span>
+      <h2>Méthode de travail claire</h2>
+      <p>Analyse du besoin, proposition technique, plan d’intervention et rendu final propre.</p>
+    </article>
+
+    <article class="highlight-card">
+      <span class="card-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" focusable="false"><path d="M13 3L4 14h6l-1 7 9-11h-6l1-7z" fill="currentColor"/></svg>
+      </span>
+      <h2>Réactivité sur les urgences</h2>
+      <p>Un traitement rapide des pannes pour sécuriser et rétablir votre installation sans délai inutile.</p>
+    </article>
+
+    <article class="highlight-card">
+      <span class="card-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" focusable="false"><path d="M12 3l7 3v5c0 5-3.3 8-7 10-3.7-2-7-5-7-10V6l7-3z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      </span>
+      <h2>Qualité d’exécution</h2>
+      <p>Matériel adapté, pose rigoureuse et finitions nettes pour un résultat durable et soigné.</p>
+    </article>
+
+    <article class="highlight-card">
+      <span class="card-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" focusable="false"><path d="M3 10l9-7 9 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 9v11h12V9" stroke="currentColor" stroke-width="2" fill="none"/><path d="M10 20v-5h4v5" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+      </span>
+      <h2>Accompagnement de A à Z</h2>
+      <p>Du premier échange au suivi après intervention, vous gardez une vision claire de chaque étape.</p>
+    </article>
+  </div>
+</section>
+
+<section class="home-links">
+  <div class="container home-links-grid">
+    <a class="home-link-card" href="services.html">
+      <span class="card-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" focusable="false"><path d="M8 8h8v8H8z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 8V5M19 12h-3M12 19v-3M5 12h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </span>
+      <h3>Services</h3>
+      <p>Découvrir les prestations proposées.</p>
+    </a>
+
+    <a class="home-link-card" href="realisations.html">
+      <span class="card-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" focusable="false"><rect x="4" y="5" width="16" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 14l2-2 3 3 3-4 2 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="9" r="1.2" fill="currentColor"/></svg>
+      </span>
+      <h3>Réalisations</h3>
+      <p>Voir quelques exemples.</p>
+    </a>
+
+    <a class="home-link-card" href="contact.html">
+      <span class="card-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" focusable="false"><path d="M6 3h4l2 5-2.5 1.5a14 14 0 006 6L17 13l5 2v4a2 2 0 01-2.2 2A18 18 0 013 6.2 2 2 0 015 4h1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <h3>Contact</h3>
+      <p>Discuter de votre projet et obtenir un devis.</p>
+    </a>
+  </div>
+</section>
+
   <footer class="site-footer" role="contentinfo">
-    <div class="container footer-inner">
-      <p>© <span class="js-year"></span> Aptoi — <a href="mentions.html">Mentions légales</a></p>
+    <div class="container footer-premium">
+      <div class="footer-col footer-brand-col">
+        <a href="https://aptoi.fr" target="_blank" rel="noopener" aria-label="Site APTOI">
+          <img class="footer-aptoi-logo" src="images/aptoi entier transparent.png" alt="Logo APTOI" loading="lazy">
+        </a>
+        <p>APTOI — studio digital pour sites vitrines premium.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Navigation</h3>
+        <p><a href="index.html">Accueil</a></p>
+        <p><a href="services.html">Services</a></p>
+        <p><a href="realisations.html">Réalisations</a></p>
+        <p><a href="contact.html">Contact</a></p>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p><a href="mailto:contact@aptoi.example">contact@aptoi.example</a></p>
+        <p><a href="tel:0692444546">0692 44 45 46</a></p>
+        <p><a href="mentions.html">Mentions légales</a></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span class="js-year"></span> APTOI — Tous droits réservés</p>
     </div>
   </footer>
 

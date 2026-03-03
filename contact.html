@@ -8,46 +8,94 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/volteeo-run-logo.png" type="image/png">
   <link rel="apple-touch-icon" href="images/volteeo-run-logo.png">
+  <script src="assets/lottie.min.js" defer></script>
   <script defer src="script.js"></script>
   <meta name="description" content="Contactez Électricien Pro pour un devis ou une intervention.">
 </head>
-<body>
+<body class="contact-page">
 
-  <header>
-    <div class="menu-toggle" id="menu-toggle" role="button" aria-controls="menu" aria-expanded="false" aria-label="Ouvrir le menu">☰</div>
-    <a href="index.html" class="logo" aria-label="Accueil (ouvre dans un nouvel onglet)" target="_blank" rel="noopener noreferrer">
-  <img src="images/volteeo-run-logo.png" alt="Voltéo" class="logo-img">
-  <span class="icon-external" data-tooltip="Ouvre dans un nouvel onglet" aria-hidden="true">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-      <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/>
-      <path d="M5 5h5V3H3v7h2V5z"/>
-    </svg>
-  </span>
-    </a>
-    <nav id="menu" role="navigation" aria-hidden="true" tabindex="-1">
-      <button id="menu-close" class="menu-close" aria-label="Fermer le menu">✕</button>
-      <a href="index.html">Accueil</a>
-      <a href="services.html">Services</a>
-      <a href="realisations.html">Réalisations</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-main">
+      <a class="brand" href="index.html" aria-label="Accueil">
+        <img src="assets/images/logo.png" alt="Logo Électricien Pro">
+      </a>
+      <button id="navToggle" class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu">☰</button>
+      <div class="header-info">
+        <a class="info-cta" href="tel:0692444546" aria-label="Appeler">
+          <span class="lottie-icon" data-lottie="assets/Contact number icon.json" aria-hidden="true"></span>
+          <span><strong>Téléphone</strong><small>0692 44 45 46</small></span>
+        </a>
+        <a class="info-cta" href="mailto:contact@electricien-demo.fr" aria-label="Email">
+          <span class="lottie-icon" data-lottie="assets/email icon.json" aria-hidden="true"></span>
+          <span><strong>Email</strong><small>contact@electricien-demo.fr</small></span>
+        </a>
+        <a class="info-cta" href="https://wa.me/262692444546" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <span class="lottie-icon" data-lottie="assets/What's app icons.json" aria-hidden="true"></span>
+          <span><strong>WhatsApp</strong><small>Message direct</small></span>
+        </a>
+      </div>
+    </div>
+    <div class="nav-strip">
+      <div class="container">
+        <nav id="navMenu" class="nav-menu" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="services.html">Services</a>
+          <a href="realisations.html">Réalisations</a>
+          <a class="active" href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <div id="menu-overlay" class="menu-overlay" hidden aria-hidden="true"></div>
-
   <main class="content">
-    <h1>Contactez-nous</h1>
+    <div class="contact-head-actions">
+      <h1>Contactez moi</h1>
+      <a class="info-cta contact-call" href="tel:0692444546" aria-label="Appelez-moi au 0692 44 45 46">
+        <span class="lottie-icon contact-call-icon" data-lottie="assets/Contact number icon.json" aria-hidden="true"></span>
+        <span><strong>Appel direct</strong><small>0692 44 45 46</small></span>
+      </a>
+    </div>
     <form class="contact-form">
       <input type="text" placeholder="Nom" required>
       <input type="email" placeholder="Email" required>
+      <select required aria-label="Service souhaité">
+        <option value="" selected disabled>Choisir un service</option>
+        <option value="depannage">Dépannage électrique</option>
+        <option value="installation">Installation électrique</option>
+        <option value="tableau">Tableau électrique</option>
+        <option value="normes">Mise aux normes</option>
+        <option value="prises-eclairage">Prises et éclairage</option>
+        <option value="renovation">Rénovation électrique</option>
+      </select>
       <textarea placeholder="Votre message" required></textarea>
       <button type="submit" class="btn">Envoyer</button>
     </form>
   </main>
 
   <footer class="site-footer" role="contentinfo">
-    <div class="container footer-inner">
-      <p>© <span class="js-year"></span> Aptoi — <a href="mentions.html">Mentions légales</a></p>
+    <div class="container footer-premium">
+      <div class="footer-col footer-brand-col">
+        <a href="https://aptoi.fr" target="_blank" rel="noopener" aria-label="Site APTOI">
+          <img class="footer-aptoi-logo" src="images/aptoi entier transparent.png" alt="Logo APTOI" loading="lazy">
+        </a>
+        <p>APTOI — studio digital pour sites vitrines premium.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Navigation</h3>
+        <p><a href="index.html">Accueil</a></p>
+        <p><a href="services.html">Services</a></p>
+        <p><a href="realisations.html">Réalisations</a></p>
+        <p><a href="contact.html">Contact</a></p>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p><a href="mailto:contact@aptoi.example">contact@aptoi.example</a></p>
+        <p><a href="tel:0692444546">0692 44 45 46</a></p>
+        <p><a href="mentions.html">Mentions légales</a></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span class="js-year"></span> APTOI — Tous droits réservés</p>
     </div>
   </footer>
 
